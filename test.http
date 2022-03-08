@@ -1,0 +1,14 @@
+@token = {{$dotenv LOTR_SECRET_TOKEN}}
+@protocol = https
+@server = the-one-api.dev/v2/
+@port = 
+
+GET {{protocol}}:{{port}}//{{server}}/character HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+###
+
+GET {{protocol}}:{{port}}//{{server}}/character?race=Maiar HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
